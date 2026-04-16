@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Autocar - Oficina Mecânica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#001F3F',
+                        secondary: '#0074D9',
+                        light: '#E9EEF5',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 0px 2px 4px rgba(0,0,0,0.3);
+            }
+            .card-hover {
+                transition: all 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 10px 25px -5px rgba(0, 116, 217, 0.3);
+            }
+        }
+    </style>
+</head>
+<body class="font-sans bg-light text-gray-800 overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-primary/95 text-white z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-wider">ELITE <span class="text-secondary">AUTOCAR</span></div>
+            <div class="hidden md:flex gap-8">
+                <a href="#home" class="hover:text-secondary transition-colors">Home</a>
+                <a href="#servicos" class="hover:text-secondary transition-colors">Serviços</a>
+                <a href="#sobre" class="hover:text-secondary transition-colors">Sobre</a>
+                <a href="#contato" class="hover:text-secondary transition-colors">Contato</a>
+            </div>
+            <a href="https://wa.me/5511937476857" target="_blank" class="hidden md:block bg-green-600 hover:bg-green-700 px-4 py-2 rounded-full font-bold transition-all shadow-md">
+                <i class="fab fa-whatsapp mr-2"></i> Fale Conosco
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 md:pt-0 min-h-screen flex items-center bg-gradient-to-br from-primary to-secondary text-white relative overflow-hidden">
+        <div class="absolute w-full h-full opacity-10">
+            <i class="fas fa-cogs absolute text-[20rem] -top-20 -left-20 animate-spin-slow"></i>
+            <i class="fas fa-car-side absolute text-[15rem] bottom-10 right-10"></i>
+        </div>
+        <div class="container mx-auto px-4 py-16 md:py-32 relative z-10">
+            <div class="max-w-3xl">
+                <h1 class="text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-tight text-shadow mb-6">
+                    O Cuidado que <br>seu Carro <span class="text-yellow-400">Merece!</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-gray-100">
+                    Serviços de qualidade, confiança e segurança para você e sua família.
+                </p>
+                <a href="https://wa.me/5511937476857" target="_blank" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-all transform hover:scale-105 shadow-xl">
+                    <i class="fab fa-whatsapp mr-2"></i> Solicite um Orçamento
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-primary mb-4">Nossos Serviços</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Oferecemos uma gama completa de soluções para manter seu veículo em perfeito estado.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Serviço 1 -->
+                <div class="bg-light p-8 rounded-2xl shadow-lg card-hover border-t-4 border-secondary">
+                    <i class="fas fa-oil-can text-5xl text-secondary mb-6"></i>
+                    <h3 class="text-2xl font-bold text-primary mb-3">Troca de Óleo</h3>
+                    <p class="text-gray-600">Troca de óleo e filtros com produtos de alta qualidade para garantir a vida útil do motor.</p>
+                </div>
+
+                <!-- Serviço 2 -->
+                <div class="bg-light p-8 rounded-2xl shadow-lg card-hover border-t-4 border-secondary">
+                    <i class="fas fa-car-crash text-5xl text-secondary mb-6"></i>
+                    <h3 class="text-2xl font-bold text-primary mb-3">Freios</h3>
+                    <p class="text-gray-600">Revisão completa do sistema de frenagem para sua total segurança nas estradas.</p>
+                </div>
+
+                <!-- Serviço 3 -->
+                <div class="bg-light p-8 rounded-2xl shadow-lg card-hover border-t-4 border-secondary">
+                    <i class="fas fa-truck-monster text-5xl text-secondary mb-6"></i>
+                    <h3 class="text-2xl font-bold text-primary mb-3">Suspensão</h3>
+                    <p class="text-gray-600">Amortecedores, molas e componentes da suspensão verificados e reparados por especialistas.</p>
+                </div>
+                
+                <!-- Serviço 4 -->
+                <div class="bg-light p-8 rounded-2xl shadow-lg card-hover border-t-4 border-secondary">
+                    <i class="fas fa-snowflake text-5xl text-secondary mb-6"></i>
+                    <h3 class="text-2xl font-bold text-primary mb-3">Limpeza de Arrefecimento</h3>
+                    <p class="text-gray-600">Higienização e manutenção do sistema de arrefecimento para evitar superaquecimento.</p>
+                </div>
+
+                <!-- Serviço 5 -->
+                <div class="bg-light p-8 rounded-2xl shadow-lg card-hover border-t-4 border-secondary">
+                    <i class="fas fa-engine-warning text-5xl text-secondary mb-6"></i>
+                    <h3 class="text-2xl font-bold text-primary mb-3">Motor</h3>
+                    <p class="text-gray-600">Diagnóstico e reparo do motor com tecnologia de ponta e mecânicos experientes.</p>
+                </div>
+
+                <!-- Serviço 6 -->
+                <div class="bg-light p-8 rounded-2xl shadow-lg card-hover border-t-4 border-secondary">
+                    <i class="fas fa-shield-alt text-5xl text-secondary mb-6"></i>
+                    <h3 class="text-2xl font-bold text-primary mb-3">Manutenção</h3>
+                    <p class="text-gray-600">Realizamos tanto a manutenção preventiva quanto a corretiva, sempre com garantia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / Contato -->
+    <section id="contato" class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-6">Entre em Contato</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Não deixe para depois o que você pode resolver hoje. Ligue ou mande uma mensagem agora mesmo!</p>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6 text-2xl">
+                <a href="tel:11937476857" class="bg-white/10 hover:bg-white/20 px-8 py-4 rounded-full transition-all">
+                    <i class="fas fa-phone mr-3"></i> (11) 93747-6857
+                </a>
+                <a href="https://wa.me/5511937476857" target="_blank" class="bg-green-600 hover:bg-green-700 px-8 py-4 rounded-full font-bold transition-all transform hover:scale-105">
+                    <i class="fab fa-whatsapp mr-3"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center">
+        <p>&copy; 2024 Elite Autocar. Todos os direitos reservados.</p>
+        <p class="mt-2 text-sm">Feito com muito cuidado e carinho 🚗💙</p>
+    </footer>
+
+    <!-- Botão WhatsApp Flutuante -->
+    <a href="https://wa.me/5511937476857" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition-all z-50 animate-bounce">
+        <i class="fab fa-whatsapp text-4xl"></i>
+    </a>
+
+    <script>
+        // Animação simples de rolagem
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+  </html>
+  
